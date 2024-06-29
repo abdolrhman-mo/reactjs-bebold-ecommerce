@@ -1,0 +1,17 @@
+color themes
+images
+
+The already existing sections layouts
+nav
+the hero section
+products
+testimonials
+
+The new layouts that im going to create
+logos
+new collection
+another new collections
+why choose us
+
+
+better naming for tags

@@ -1,0 +1,39 @@
+@use 'base'
+
+.product-page
+    color: #fff 
+    background: base.$background_color
+    padding-top: 80px
+    .line-through
+        opacity: .5
+        text-decoration: line-through
+        padding-right: 7px
+    .theme-color
+        color: base.$main_color
+    .gray
+        opacity: .5
+    select
+        color: #fff
+        background: base.$background_color
+        padding: 10px
+        border: none
+        width: 70%
+    header
+        margin-bottom: 80px
+        img
+            width: 100%
+        .text
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            p.sale
+                color: #fff
+                background: base.$main_color
+                width: fit-content
+                border-radius: 15px
+                display: inline-block
+                font-size: 13px
+                font-weight: 700
+                padding: 6px 10px
+    .more
