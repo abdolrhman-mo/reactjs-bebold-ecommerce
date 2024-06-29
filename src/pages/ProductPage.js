@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { products, slides } from "../data"
+import { products, slide } from "../data"
 import Nav from "../sections/Nav"
 import Footer from "../sections/Footer"
 import ProductList from "../sections/ProductList"
@@ -26,7 +26,7 @@ export default function ProductPage() {
                                     <span className="line-through">{product.price1} EGP </span>
                                     <span className="theme-color">{product.price2} EGP </span>
                                 </h3>
-                                <p className="gray">{slides[0].describtion}</p>
+                                <p className="gray">{slide.describtion}</p>
                                 <select>
                                     <option value="s">s</option>
                                     <option value="m">m</option>
