@@ -1,9 +1,9 @@
 import logo from '../static/imgs/logo-regular.png'
 import { Link } from 'react-router-dom'
 
-export default function Nav({position = "fixed"}) {
+export default function Nav() {
     return (
-        <nav style={{position: position}}>
+        <nav>
             <img src={logo} alt="" />
             <form action="">
                 <input type="search" name="" id="" placeholder='Search for products...' />
@@ -16,10 +16,10 @@ export default function Nav({position = "fixed"}) {
                     <a href="">Shop</a>
                 </li>
                 <li>
-                    <a href="#footer">Contact Us</a>
+                    <Link to="/contact">Contact Us</Link>
                 </li>
                 <li>
-                    <Link to="/about">About Us</Link>
+                    <Link to="/">About Us</Link>
                 </li>
             </ul>
             <div>

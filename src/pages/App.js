@@ -6,15 +6,17 @@ import {
 
 // my components & data
 import Nav from '../sections/Nav'
-import Header from '../sections/Header'
+import Hero from '../sections/Hero'
 import Reviews from '../sections/Reviews'
 import ProductList from '../sections/ProductList'
 import Footer from '../sections/Footer'
 import About from "./About"
-import ProductPage from "./ProductPage"
+import Contact from "./Contact"
+import ProductDetails from "./ProductDetails"
+import Billboard from "../sections/Billboard"
+import MyAccount from "./MyAccount"
 // static files
 import '../static/sass/App.sass'
-import MyAccount from "./MyAccount"
 
 // TODO: shoppppppppppppppppppppppppppppppping carttttttttttttttttttttttttttttttttttttttttttt
 
@@ -24,7 +26,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product/:index" element={<ProductPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:index" element={<ProductDetails />} />
         <Route path="/my-account" element={<MyAccount />} />
       </Routes>
     </Router>
@@ -34,13 +37,13 @@ function App() {
 function Home() {
   return (
     <div className="App">
-      <Nav position={"absolute"} />
-      <Header />
+      <Nav />
+      <Hero />
       <ProductList
         title="Trending Now"
         tag="trending"
       />
-      <hr />
+      <Billboard />
       <Reviews />
       <hr />
       <ProductList

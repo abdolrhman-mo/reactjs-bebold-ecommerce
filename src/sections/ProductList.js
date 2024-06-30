@@ -14,7 +14,7 @@ export default function ProductList({title, tag}) {
         )
     }
     const listItems = filtered.map(product =>
-        <div className="col-3">
+        <div className="col-md-3 col-6">
             <Product
                 name={product.name}
                 imgUrl={product.imgUrl}

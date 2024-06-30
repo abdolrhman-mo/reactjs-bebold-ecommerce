@@ -1,35 +1,37 @@
 @use 'base'
 
 
-.App
+footer
+    padding: 60px
+    background-color: base.$background_sec_color
+    input
+        border: none
+    input[type="text"]
+        padding: 10px
+        width: 100%
+    input[type="submit"]
+        color: #fff
+        background-color: #000
+        padding: 10px
+        width: 100%
+    hr
+        margin: 60px 0 !important
+        width: 100% !important
+    ul
+        list-style-type: none
+        li
+            padding-right: 20px
+            a
+                color: base.$font_color
+                text-decoration: none
+                transition: all 0.3s ease
+                &:hover
+                    color: base.$main_color
+    svg
+        padding: 10px
+    p.copyright
+        opacity: 0.7  
+
+@media screen and (max-width: 768px)
     footer
-        padding: 60px
-        background-color: #F6EDF0
-        input
-            border: none
-        input[type="text"]
-            padding: 10px
-            width: 75%
-            padding-right: 5%
-        input[type="submit"]
-            color: #fff
-            background-color: #000
-            padding: 10px
-            width: 20%
-        hr
-            margin: 60px 0 !important
-            width: 100% !important
-        ul
-            list-style-type: none
-            li
-                padding-right: 20px
-                a
-                    color: base.$font_color
-                    text-decoration: none
-                    transition: all 0.3s ease
-                    &:hover
-                        color: base.$main_color
-        svg
-            padding: 10px
-        p.copyright
-            opacity: 0.7    
+        text-align: center

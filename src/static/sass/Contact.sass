@@ -1,0 +1,62 @@
+@use 'base'
+    
+.contact
+    margin-top: 80px
+    .hero
+        height: 75vh
+        background: url('../imgs/bg-06.jpg')
+        background-size: cover
+        background-position: center
+        color: base.$background_color
+        .aside
+            height: 75vh
+            display: flex
+            flex-direction: column
+            justify-content: center
+            h1
+                font-size: 3.5rem
+            p
+                margin: 0
+
+    .contact-form
+        height: 100vh
+        display: flex
+        align-items: center
+        .aside
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            .title
+            .body
+            .link
+            ul.links-list
+                list-style-type: none
+                padding: 0
+                li
+                    a.link
+                        color: base.$font_color
+                        text-decoration: none
+                        transition: 0.3s all ease
+                    &:hover a.link
+                        color: base.$main_color
+        form
+            background: base.$background_sec_color
+            height: 70vh
+            display: flex
+            align-items: center
+            h4
+            label
+            input
+                border: none
+                padding: 5px 10px
+            input.cta 
+                color: base.$background_color 
+                background: base.$font_color 
+                text-decoration: none 
+                padding: 5px 20px
+                width: fit-content
+                border: none
+                transition: all .3s ease
+                &:hover
+                    opacity: .7
+            textarea

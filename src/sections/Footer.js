@@ -7,22 +7,24 @@ export default function Footer() {
         <footer id='footer'>
             <div className="container">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-md-6">
                         <h4>Subscribe to our newsletter</h4>
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-4">
                         <input type="text" placeholder='Your email address...' />
+                    </div>
+                    <div className="col-md-2">
                         <input type="submit" value="SUBSCIBE" />
                     </div>
                     <div className="col-12">
                         <hr />
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-6">
                         <img src={logo} alt="Be Bold" />
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-6">
                         <div className="row">
-                            <div className="col-4">
+                            <div className="col-md-4">
                                 <ul>
                                     <li>
                                         <a href="">Shop All</a>
@@ -44,7 +46,7 @@ export default function Footer() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4">
+                            <div className="col-md-4">
                                 <ul>
                                     <li>
                                         <a href="">Refund Policy</a>
@@ -60,7 +62,7 @@ export default function Footer() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4">
+                            <div className="col-md-4">
                                 <i className="fa-brands fa-facebook"></i>
                                 <i className="fa-brands fa-twitter"></i>
                                 <i className="fa-brands fa-instagram"></i>

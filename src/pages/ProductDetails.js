@@ -3,9 +3,10 @@ import { products, slide } from "../data"
 import Nav from "../sections/Nav"
 import Footer from "../sections/Footer"
 import ProductList from "../sections/ProductList"
-import "../static/sass/ProductPage.sass"
+import "../static/sass/ProductDetails.sass"
+import "../static/sass/Product.sass"
 
-export default function ProductPage() {
+export default function ProductDetails() {
     let { index } = useParams()
     index--
     const product = products[index]
@@ -20,7 +21,7 @@ export default function ProductPage() {
                         </div>
                         <div className="col-6">
                             <div className="text">
-                                <p className="sale">UP TO - {product.sale} %</p>
+                                <p className="sale">{product.sale}</p>
                                 <h2>{product.name}</h2>
                                 <h3>
                                     <span className="line-through">{product.price1} EGP </span>
@@ -34,6 +35,7 @@ export default function ProductPage() {
                                     <option value="xl">xl</option>
                                 </select>
                                 <p className="gray">Purchase this product now and earn {product.price2} Points!</p>
+                                <a href="" className="cta">Add To Cart</a>
                             </div>
                         </div>
                     </div>
@@ -42,7 +44,7 @@ export default function ProductPage() {
             <div className="more">
                 <ProductList
                     title="Related products"
-                    tag="latest"
+                    tag="trending"
                 />
             </div>
             <Footer />

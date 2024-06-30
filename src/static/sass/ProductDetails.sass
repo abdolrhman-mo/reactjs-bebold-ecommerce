@@ -1,7 +1,7 @@
 @use 'base'
 
 .product-page
-    color: #fff 
+    color: base.$font_color
     background: base.$background_color
     padding-top: 80px
     .line-through
@@ -13,10 +13,9 @@
     .gray
         opacity: .5
     select
-        color: #fff
+        color: base.$font_color
         background: base.$background_color
         padding: 10px
-        border: none
         width: 70%
     header
         margin-bottom: 80px
@@ -28,7 +27,7 @@
             flex-direction: column
             justify-content: space-evenly
             p.sale
-                color: #fff
+                color: base.$background_color
                 background: base.$main_color
                 width: fit-content
                 border-radius: 15px
@@ -36,4 +35,14 @@
                 font-size: 13px
                 font-weight: 700
                 padding: 6px 10px
+            a.cta
+                color: base.$background_color 
+                background: base.$font_color 
+                text-decoration: none 
+                padding: 10px 20px
+                width: fit-content
+                border: none
+                transition: all .3s ease
+                &:hover
+                    opacity: .7
     .more

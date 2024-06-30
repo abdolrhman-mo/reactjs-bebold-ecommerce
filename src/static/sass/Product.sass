@@ -5,8 +5,9 @@
     width: 100%
     margin: 0 auto
     margin-bottom: 50px
+    font-family: roc, sans-serif
     .top
-        min-height: 350px
+        height: 350px
         background-size: 100%
         transition: all 0.3s ease
         background-position: center
@@ -54,7 +55,9 @@
                     bottom: 5px
     .body
         a.title
+            text-decoration: none
             h3
+                color: base.$font_color
                 padding: 20px 0 0
                 cursor: pointer
                 transition: all .3s ease
@@ -65,6 +68,7 @@
                 text-decoration: line-through
                 color: #b3b3b3
         a.add-to-wishlist
+            color: base.$font_color 
             text-decoration: none
             transition: all .3s ease
             &:hover

@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
 import '../static/sass/Product.sass'
+import { useState } from "react";
 
 function Product({name, imgUrl, sale, price1, price2, index}) {
   index++
   const productLink = "/product/" + index
+  const [productHeight, setProductHeight] = useState(innerWidth / 4)
+  // let productHeight
+  setInterval(() => {
+    if (innerWidth > 768) {
+        setProductHeight(innerWidth / 4)
+    } else {
+      setProductHeight(innerWidth / 2.5)
+    }
+  }, 400);
   return (
     <div className="product">
         <Link to={productLink}>
-          <div className="top" style={{backgroundImage: "url(" + imgUrl + ")"}}>
+          <div className="top" style={{backgroundImage: "url(" + imgUrl + ")", height: productHeight + "px"}}>
             <p className="sale"> {sale} </p>
             <div className="links">
               <i className="fa-regular fa-heart"></i>
