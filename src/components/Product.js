@@ -1,19 +1,31 @@
 import { Link } from "react-router-dom";
 import '../static/sass/Product.sass'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Product({name, imgUrl, sale, price1, price2, index}) {
   index++
   const productLink = "/product/" + index
-  const [productHeight, setProductHeight] = useState(innerWidth / 4)
-  // let productHeight
-  setInterval(() => {
-    if (innerWidth > 768) {
-        setProductHeight(innerWidth / 4)
-    } else {
-      setProductHeight(innerWidth / 2.5)
+  const [productHeight, setProductHeight] = useState(0)
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (window.innerWidth > 768) {
+        setProductHeight(window.innerWidth / 4)
+      } else {
+        setProductHeight(window.innerWidth / 2.5)
+      }
     }
-  }, 400);
+
+    // Initial height calculation
+    updateHeight()
+
+    // Add resize listener
+    window.addEventListener('resize', updateHeight)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateHeight)
+  }, [])
+
   return (
     <div className="product">
         <Link to={productLink}>
